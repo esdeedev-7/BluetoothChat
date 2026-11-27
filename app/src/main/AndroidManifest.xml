@@ -9,6 +9,7 @@
     <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
 
     <application
+        android:icon="@mipmap/ic_launcher"
         android:label="BluetoothChat"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
