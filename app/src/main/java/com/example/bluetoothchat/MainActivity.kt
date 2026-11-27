@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         chatScroll = ScrollView(this).apply { addView(messagesBox) }
 
         messageInput = EditText(this).apply {
-            hint = "iMessage"
+            hint = "Message"
             textSize = 16f
             setTextColor(Color.BLACK)
             setPadding(dp(14), dp(8), dp(14), dp(8))
