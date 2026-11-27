@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
 
-    // ---------- UI ----------
+    // UI 
 
     private fun buildUi(): LinearLayout {
         statusText = TextView(this).apply {
@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
             setTextColor(Color.WHITE)
             background = GradientDrawable().apply {
                 shape = GradientDrawable.OVAL
-                setColor(Color.parseColor("#0A84FF"))
+                setColor(Color.parseColor("#D97757"))
             }
             setOnClickListener { sendMessage() }
         }
@@ -157,7 +157,7 @@ class MainActivity : AppCompatActivity() {
     private fun columnWeighted(weight: Float) =
         LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, weight)
 
-    // Adds one iMessage-style bubble: blue on the right for me, gray on the left for them.
+    // Adds one chat bubble: orange on the right for me, gray on the left for them.
     private fun addBubble(text: String, mine: Boolean) {
         val bubble = TextView(this).apply {
             this.text = text
@@ -167,7 +167,7 @@ class MainActivity : AppCompatActivity() {
             maxWidth = (resources.displayMetrics.widthPixels * 0.7).toInt()
             background = GradientDrawable().apply {
                 cornerRadius = dp(18).toFloat()
-                setColor(if (mine) Color.parseColor("#0A84FF") else Color.parseColor("#E9E9EB"))
+                setColor(if (mine) Color.parseColor("#D97757") else Color.parseColor("#E9E9EB"))
             }
         }
         val row = LinearLayout(this).apply {
